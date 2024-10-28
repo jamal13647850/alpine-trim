@@ -2,11 +2,14 @@
   "name": "alpine-trim",
   "version": "1.0.0",
   "description": "A plugin for alpinejs",
-  "main": "/dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "check-format": "prettier --check .",
+    "format": "prettier --write .",
     "build": "tsc --outDir ./dist/ ./src/index.ts",
     "buildes": "esbuild ./src/index.ts --outfile=./dist/index.js --bundle --platform=node --target=esnext",
-    "watch": "esbuild ./src/index.ts --outfile=./dist/index.js --bundle --platform=node --target=esnext --watch"
+    "watch": "esbuild ./src/index.ts --outfile=./dist/index.js --bundle --platform=node --target=esnext --watch",
+    "ci": "npm run buildes && npm run check-format"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
   "homepage": "https://github.com/jamal13647850/alpine-trim#readme",
   "devDependencies": {
     "@types/node": "^22.8.1",
-    "esbuild": "^0.24.0"
+    "esbuild": "^0.24.0",
+    "prettier": "^3.3.3"
   }
 }

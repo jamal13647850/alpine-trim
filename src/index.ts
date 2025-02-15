@@ -21,7 +21,7 @@ export default function (Alpine) {
     if (text.length > count) {
       if (respectWordBoundary) {
         let lastSpace = text.substr(0, count).lastIndexOf(' ');
-        
+
         if (lastSpace === -1) {
           let nextSpace = text.indexOf(' ', count);
           if (nextSpace !== -1 && nextSpace - count <= 5) {
@@ -35,7 +35,7 @@ export default function (Alpine) {
       } else {
         text = text.substr(0, count);
       }
-      
+
       el.innerHTML = text + (showDots ? '...' : '');
     }
   });

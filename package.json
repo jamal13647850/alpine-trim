@@ -1,6 +1,6 @@
 {
   "name": "alpine-trim",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin for alpinejs",
   "main": "dist/index.js",
   "scripts": {

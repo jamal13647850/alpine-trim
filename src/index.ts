@@ -6,7 +6,10 @@ export default function (Alpine) {
 
     const countIndex = modifiers.indexOf('count');
     if (countIndex !== -1 && countIndex + 1 < modifiers.length) {
-      count = modifiers[countIndex + 1];
+      const parsedCount = parseInt(modifiers[countIndex + 1], 10);
+      if (!isNaN(parsedCount)) {
+        count = parsedCount;
+      }
     }
 
     if (modifiers.includes('nodots')) {
